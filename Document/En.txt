@@ -1,0 +1,18 @@
+partial: 				Từng phần.    ví dụ 3.7 --> .7 phần dư kiểu vậy ấy
+conceptual: 			Khái niệm.
+Representation:		Đại diện.
+interpet:			Xen Vào.
+initial:				Ban đầu.
+operations:			Hoạt động.
+quotient:			Thương số.
+demonstrate:			Chứng minh.
+generic:			Chung.
+domain:			Miền.
+discrete:			Rời Rạc.
+fostering:			Bồi dưỡng.
+preconception:			Định kiến.
+occupied:			Chiếm lĩnh.
+vacant:				Bỏ Trống.
+hypothesis:			Giả thuyết.
+argument:			Đối số. 		"Ví dụ trong hàm có tham số a thì giá trị của 
+parameter:			Tham số.	tham số a là đối số."
