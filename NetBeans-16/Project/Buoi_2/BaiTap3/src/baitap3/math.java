@@ -4,7 +4,6 @@
  */
 package baitap3;
 
-import java.text.NumberFormat;
 
 /**
  *
@@ -12,30 +11,44 @@ import java.text.NumberFormat;
  */
 public class math {
     // '+'
-    static void fractions_sum(PhanSo p1, PhanSo p2){
-        System.out.println("Tong cua 2 phan so: ");
-        
+    static PhanSo fractions_sum(PhanSo p1, PhanSo p2){
         int tuSo =p1._tuSo * p2._mauSo + p1._mauSo * p2._tuSo;
         int mauSo = p1._mauSo * p2._mauSo;
         
         PhanSo create = new PhanSo(tuSo,mauSo);
         create = inside.rutGon(create);
-        create.in();
+        return create;
     }
     // '-'
-    static void fractions_multiple(){
+    static PhanSo fractions_subtract(PhanSo p1, PhanSo p2){
+        int tuSo =p1._tuSo * p2._mauSo - p1._mauSo * p2._tuSo;
+        int mauSo = p1._mauSo * p2._mauSo;
         
+        PhanSo create = new PhanSo(tuSo,mauSo);
+        create = inside.rutGon(create);
+        return create; 
     }
     // '*'
-    static void fractions_divine(){
-        
+    static PhanSo fractions_multiple(PhanSo p1, PhanSo p2){
+        PhanSo res = new PhanSo(p1._tuSo * p2._tuSo, p1._mauSo * p2._mauSo);
+        return res;
     }
     // '/'
-    static void fractions_minus(){
-        
+    static PhanSo fractions_divine(PhanSo p1, PhanSo p2){
+        PhanSo p3 = new PhanSo(p2._mauSo , p2._tuSo);
+        return fractions_multiple(p1, p3);
     }
+    // '>'
     static boolean p1_is_Greater_than_p2(PhanSo p1,PhanSo p2){
         float k = p1.dmc - p2.dmc;
         return (k > 0);
+    }
+    // 'swap'
+    static void swap(PhanSo p1,PhanSo p2){
+        PhanSo temp = new PhanSo(p2._tuSo,p2._mauSo);
+        p2._tuSo  = p1._tuSo;
+        p2._mauSo = p1._mauSo;
+        p1._tuSo  = temp._tuSo;
+        p1._mauSo = temp._mauSo;
     }
 }

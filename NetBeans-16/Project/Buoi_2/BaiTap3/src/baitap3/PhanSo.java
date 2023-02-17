@@ -23,6 +23,7 @@ public class PhanSo {
     public PhanSo(int tuSo ,int mauSo){
         this._tuSo = tuSo;
         this._mauSo = mauSo;
+        this.dmc = (float)tuSo / mauSo;
     }
     
     // read method.
@@ -73,7 +74,7 @@ public class PhanSo {
             System.out.println("Error: Sau nghich dao mau so bang 0.");
             return ;
         }
-        System.out.println("Nghich dao: ");
+        System.out.print("Nghich dao: ");
         System.out.println(this._mauSo + "/" + this._tuSo);
     }
     // end print Methods
@@ -89,6 +90,42 @@ public class PhanSo {
         PhanSo p1 = new PhanSo(this._tuSo,this._mauSo);
         return math.p1_is_Greater_than_p2(p1, p2);
     }
-    
-//    public cong()
+    // Tinh toan 2 phan so//
+    public PhanSo cong(PhanSo a){
+        PhanSo p1 = new PhanSo(this._tuSo,this._mauSo);
+        return math.fractions_sum(p1, a);
+    }
+    public PhanSo Tru(PhanSo a){
+        PhanSo p1 = new PhanSo(this._tuSo,this._mauSo);
+        return math.fractions_subtract(p1, a);
+    }
+    public PhanSo Nhan(PhanSo a){
+        PhanSo p1 = new PhanSo(this._tuSo,this._mauSo);
+        return math.fractions_multiple(p1, a);
+    }
+    public PhanSo Chia(PhanSo a){
+        PhanSo p1 = new PhanSo(this._tuSo,this._mauSo);
+        return math.fractions_divine(p1, a);
+    }
+    // Tinh toan voi so nguyen//
+    public PhanSo cong(int a){
+        PhanSo p1 = new PhanSo(this._tuSo,this._mauSo);
+        PhanSo p2 = new PhanSo(a,1);
+        return math.fractions_sum(p1, p2);
+    }
+    public PhanSo Tru(int a){
+        PhanSo p1 = new PhanSo(this._tuSo,this._mauSo);
+        PhanSo p2 = new PhanSo(a,1);
+        return math.fractions_subtract(p1, p2);
+    }
+    public PhanSo Nhan(int a){
+        PhanSo p1 = new PhanSo(this._tuSo,this._mauSo);
+        PhanSo p2 = new PhanSo(a,1);
+        return math.fractions_multiple(p1, p2);
+    }
+    public PhanSo Chia(int a){
+        PhanSo p1 = new PhanSo(this._tuSo,this._mauSo);
+        PhanSo p2 = new PhanSo(a,1);
+        return math.fractions_divine(p1, p2);
+    }
 }
